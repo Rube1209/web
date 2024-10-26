@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        /* 全局样式 */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #1a73e8;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #e1e8f0;
+            border-radius: 5px;
+        }
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            background: linear-gradient(135deg, #1a73e8, #4285f4);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+        .hero a {
+            background-color: white;
+            color: #1a73e8;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+        .hero a:hover {
+            background-color: #f1f1f1;
+        }
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            flex: 1;
+            max-width: 300px;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>我的个人主页</h1>
+</header>
+
+<nav>
+    <a href="#about">关于我</a>
+    <a href="#projects">项目</a>
+    <a href="#contact">联系我</a>
+</nav>
+
+<div class="hero">
+    <div>
+        <h1>欢迎来到我的个人主页</h1>
+        <p>展示我的JavaScript作品和项目，欢迎探索！</p>
+        <a href="#projects">查看项目</a>
+    </div>
+</div>
+
+<section id="about" class="section">
+    <h2>关于我</h2>
+    <p>我是一个热爱编程的开发者，专注于前端开发，特别是JavaScript和现代网页技术。</p>
+</section>
+
+<section id="projects" class="section">
+    <h2>我的项目</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>项目 1</h3>
+            <p>这是我第一个项目的描述，使用了React和Node.js。</p>
+        </div>
+        <div class="card">
+            <h3>项目 2</h3>
+            <p>这是我第二个项目，专注于数据可视化，使用了D3.js。</p>
+        </div>
+        <div class="card">
+            <h3>项目 3</h3>
+            <p>我的第三个项目是一个个人博客系统，使用了Ghost。</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 我的个人主页 | 联系方式: example@example.com</p>
+</footer>
+
+</body>
+</html>
