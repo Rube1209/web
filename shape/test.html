@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometric Shape Plotting</title>
+</head>
+<body>
+<h3>Plot for a^n + b^n = 1</h3>
+<label for="nValue">Enter n value:</label>
+<input type="number" id="nValue" value="2" min="1">
+<button onclick="updateShape()">Draw Shape</button>
+<canvas id="canvas" width="500" height="500" style="border:1px solid #000; margin-top:10px;"></canvas>
+
+<script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    const centerX = canvas.width / 2;
+    const centerY = canvas.height / 2;
+    const scale = 200; // Scaling factor to fit the shape on canvas
+
+    function drawShape(n) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // 清空画布
+        ctx.beginPath();
+
+        for (let x = -1; x <= 1; x += 0.01) {
+            for (let y = -1; y <= 1; y += 0.01) {
+                if (Math.pow(Math.abs(x), n) + Math.pow(Math.abs(y), n) <= 1) {
+                    // 将 (x, y) 转换为画布上的坐标
+                    ctx.fillRect(centerX + x * scale, centerY - y * scale, 1, 1);
+                }
+            }
+        }
+
+        ctx.closePath();
+    }
+
+    function updateShape() {
+        const n = parseFloat(document.getElementById('nValue').value);
+        if (n >= 1) {
+            drawShape(n);
+        } else {
+            alert("Please enter a value for n greater than or equal to 1.");
+        }
+    }
+
+    drawShape(2); // 初始绘制 n=2 的图形
+</script>
+</body>
+</html>
